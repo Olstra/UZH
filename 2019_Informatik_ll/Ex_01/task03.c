@@ -14,7 +14,7 @@ void checkFibonacci( int num ) {
 	int fibo1 = 0;
 	int fibo2 = 1;
 
-	// first check if num <= fibo2
+	// first check beginning of fibonacci sequence
 	if( num == fibo1 || num == fibo2 ) { printf( "Result: TRUE\n" ); return; }
 
 	int temp;
