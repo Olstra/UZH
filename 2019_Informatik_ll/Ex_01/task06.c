@@ -29,7 +29,7 @@ int main() {
 
 	int selection;
 
-	int input[8] = { 22, 6, 1, 41, 26, 41, 47, 8 };
+	int input[] = { 22, 6, 1, 41, 26, 41, 47, 8 };
 
 	printf( "\nWELCOME TO VISUALIZATION FOR SORT ALGORITHMS\n\n[1] Bubble Sort\n[2] Selection Sort\n[3] Insertion Sort\n\nSelect your algorithm: " );
 	scanf("%d", &selection );
