@@ -7,23 +7,22 @@
 
 
 // TODO 
-// getArrSize
 // swap
 
 #include <stdio.h>
 
 
 // Sorting Algorithms
-void bubbleSort(int A[] );
+void bubbleSort(int A[], int n );
 
-void selectionSort( int A[] );
+void selectionSort( int A[], int n );
 
-void insertionSort( int A[] );
+void insertionSort( int A[], int n );
 
 // helpert functions
-void printArr( int A[] );
-void swap( int a, int b );
-int getArrSize( int A[] );
+void printArr( int A[], int n );
+void swap( int *a, int *b );
+
 
 int main() {
 
@@ -31,38 +30,43 @@ int main() {
 
 	int input[] = { 22, 6, 1, 41, 26, 41, 47, 8 };
 
+	int inputLen = sizeof( input ) / sizeof( input[0] );
+
 	printf( "\nWELCOME TO VISUALIZATION FOR SORT ALGORITHMS\n\n[1] Bubble Sort\n[2] Selection Sort\n[3] Insertion Sort\n\nSelect your algorithm: " );
 	scanf("%d", &selection );
 
 	switch( selection ) {
 		case 1:
-			bubbleSort( input );
+			bubbleSort( input, inputLen );
 			break;
 	
 		case 2:
-			selectionSort( input );	
+			selectionSort( input, inputLen );	
 			break;
 		
 		case 3:	
-			insertionSort( input );		
+			insertionSort( input, inputLen );		
 			break;
 
 		default: break;
 	}
 	
-	printArr( input );
+	printArr( input, inputLen );
 
 	return 0;
 
 }
 
-int getArrSize( int A[] ) {
-	int size = sizeof( A ) / sizeof( int );
-	return size;
+
+void swap( int *a, int *b ) {
+	// change pointers
+	
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
-void printArr( int A[] ) {
-	int n = 8; //getArrSize ( A );
+void printArr( int A[], int n ) {
 
 	for( int i = 0; i < n; i++ ) {
 		printf( "%d ", A[i] );	
@@ -70,47 +74,54 @@ void printArr( int A[] ) {
 	printf( "\n" );
 }
 
-void bubbleSort( int A[] ) {
-	int n = 8; //getArrSize( A );
+void bubbleSort( int A[], int n ) {
 	int temp;
-	int swaped = 0;
 
-	do {
-		for( int i = 1; i < n; i++ ) {
-			swaped = 0;
-			//for( int j = i-1; j <= i+1; j++ ) {
-			if( A[i] < A[i-1] ) {
-				//swap
-				temp = A[i];
-				A[i] = A[i-1];
-				A[i-1] = temp;
+	for( int i = 0; i < n; i++ ) {
+		printf( "Iteration %d:\n", i+1 );
+		printArr( A, n );
 
-				swaped++;
+		for( int j = n-2; j >= i; j-- ) {
+			if( A[j] > A[j+1] ) {
+				swap( &A[j], &A[j+1] );
+				
+				printArr( A, n );
 			}
-		//	}
 		}
-	} while( swaped != 0);
+	}
 
 
 }
 
-void selectionSort( int A[] ) {}
+void selectionSort( int A[], int n ) {
+	// places current min at beginning of sub-array
+	int min, temp;
 
-void insertionSort( int a[] ) {
+	for( int i = 0; i < n; i++ ) {
+		min = i;	// set default min
 
-	int n = 8; // getArrSize( a );
+		for( int j = i; j < n; j++ ) {
+			if( A[j] < A[min] ) { min = j; } // find current min			
+
+		}
+		
+		// update sorted sub-array
+		if( A[i] > A[min] ) {
+			swap( &A[i], &A[min]  );
+		}
+	}
+}
+
+void insertionSort( int a[], int n ) {
+
 	int key, temp;
 
-        for( int i = 1; i <= n; i++ ) {
+        for( int i = 1; i < n; i++ ) {
 
                 key = a[i];
 
                 while( a[i] < a[i-1] && i >= 1 ) {
-                        // swap
-                        temp = a[i];
-                        a[i] = a[i-1];
-                        a[i-1] = temp;
-
+                        swap( &a[i], &a[i-1] );
                         i--;    // go to next element
                 }
 
