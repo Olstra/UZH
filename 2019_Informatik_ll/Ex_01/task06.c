@@ -5,10 +5,6 @@
 	Author: Oliver Strassmann
 */
 
-
-// TODO 
-// swap
-
 #include <stdio.h>
 
 
