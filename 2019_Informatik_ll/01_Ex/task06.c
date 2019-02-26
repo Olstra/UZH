@@ -5,12 +5,7 @@
 	Author: Oliver Strassmann
 */
 
-
-// TODO 
-// swap
-
 #include <stdio.h>
-
 
 // Sorting Algorithms
 void bubbleSort(int A[], int n );
@@ -22,7 +17,6 @@ void insertionSort( int A[], int n );
 // helpert functions
 void printArr( int A[], int n );
 void swap( int *a, int *b );
-
 
 int main() {
 

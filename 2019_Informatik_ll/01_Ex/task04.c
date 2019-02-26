@@ -11,41 +11,51 @@
 
 int main() {
 
-	int A[100];
-	int B[100];
-	int lenA = 0;
-	int lenB = 0;
-	char temp;
-
-	
-	// scan A
-	printf( "Values of A separated by spaces (non-number to stop): " );
-	while( scanf( "%d", &A[lenA] ) ) { lenA++; }
-        scanf( "%s", &temp); // ignore 'end' char
-
-	// scan B
-	printf( "Values of B separated by spaces (non-number to stop): " );
-	while( scanf( "%d", &B[lenB] ) ) { lenB++; }
-        scanf( "%s", &temp); // ignore 'end' char
+    int A[100];
+    int B[100];
+    int lenA = 0;
+    int lenB = 0;
+    char temp[100];
 
 
-	// print result
+    // scan A
+    printf( "Values of A separated by spaces (non-number to stop): " );
+    while( scanf( "%d", &A[lenA] ) == 1 ) { lenA++; }
+    scanf( "%s", &temp[0] ); // ignore 'end' char
 
-	int iA = 0;
-	int iB = 0;
+    // scan B
+    printf( "Values of B separated by spaces (non-number to stop): " );
+    while( scanf( "%d", &B[lenB] ) == 1 ) { lenB++; }
+    scanf( "%s", &temp[0]); // ignore 'end' char
 
-	while( iA < lenA && iB < lenB ) {
-			
-		if( A[iA] > B[iB] ) { printf( "%d ", A[iA] ); iA++; } // if A is bigger print it and go to next number
-		else if( B[iB] > A[iA] ) { printf( "%d ", B[iB] ); iB++; } // same if B bigger
-		else { 
-			// if both numbers are equal print both and increase both indexes
-			printf( "%d %d ", A[iA], B[iB] ); iA++; iB++;
-		}
-	}	
 
-	printf( "\n" );
-	
-	return 0;
+    // print result
+
+    int idxA = 0;
+    int idxB = 0;
+
+    while( idxA < lenA && idxB <  lenB ) {
+
+        if( A[idxA] > B[idxB] ) {
+            printf( "%d ", A[idxA] );
+            idxA++;
+        }
+        else if( A[idxA] < B[idxB] ) {
+            printf( "%d ", B[idxB] );
+            idxB++;
+        }
+        else {
+            printf( "%d %d ", A[idxA], B[idxB] );
+            idxA++; idxB++;
+        }
+    }
+
+    // print remaining array if any 
+    while ( idxA < lenA ) { printf( "%d ", A[idxA] ); idxA++; }
+    while ( idxB < lenB ) { printf( "%d ", B[idxB] ); idxB++; }
+
+    printf( "\n" );
+
+    return 0;
 
 }
