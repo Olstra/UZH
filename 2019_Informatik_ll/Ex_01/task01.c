@@ -5,63 +5,63 @@
 	Author: Oliver Strassmann
 */
 
-// TODO add code for german letters äöü
-
 
 #include <stdio.h>
 
 
 int getArraySize( char inputArr[] ) {
 
-	int size;
-	
-	size = sizeof( inputArr ) / sizeof( char );
+    int size;
 
-	size -= 1; // -1 because of endstring char
+    size = sizeof( inputArr ) / sizeof( char );
 
-	return size;
+    size -= 1; // -1 because of endstring char
+
+    return size;
 
 }
 
 void convertCharacters(char input[]) {
 
-	int ascii;
+    int ascii;
 
-	int length = getArraySize( input );
+    int length = 0;
 
-	for ( int i = 0; i < length; i++ ) {
-		
-		ascii = input[i]; // get ascii code pro letter
+    while ( input[length] != '\0' ) { length++; }
 
-		// check for letters
-		if ( ascii >= 65 && ascii <= 122) {
-	
-			// convert uppercase to lowercase
-			if ( ascii <= 90 ) {
-		
-				input[i] = ascii + 32;
-			}
-			// convert lowercase to uppercase
-			else {
-				input[i] = ascii - 32;
-			}
+    for ( int i = 0; i < length; i++ ) {
 
-		}  
-	}	
+        ascii = input[i]; // get ascii code pro letter
+
+        // check for letters
+        if ( ascii >= 65 && ascii <= 122) {
+
+            // convert uppercase to lowercase
+            if ( ascii <= 90 ) {
+
+                input[i] = ascii + 32;
+            }
+                // convert lowercase to uppercase
+            else {
+                input[i] = ascii - 32;
+            }
+
+        }
+    }
 }
 
 
 int main () {
 
-	char inputString[100];
+    char inputString[100];
 
-	printf( "Please enter a string: " );
-	
-	scanf( "%s" , inputString);
+    printf( "Please enter a string: " );
 
-	convertCharacters( inputString );
+    scanf( "%[^\n]", inputString );
 
-	printf( "Result string: %s\n" , inputString);
+    convertCharacters( inputString );
 
-	return 0;
+    printf( "Result string: %s\n" , inputString);
+
+    return 0;
 }
