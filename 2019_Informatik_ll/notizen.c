@@ -18,6 +18,12 @@ int main() {
 	printf("a * b = %d\n", c);
 
 	printf( "_____________" );
+	
+	////////////////////////////////////////////////////
+	
+	// Read sentences untill \newline 
+	char inputString[100];
+	scanf( "%[^\n]", inputString ); 
 
 
 
