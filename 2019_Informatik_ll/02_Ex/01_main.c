@@ -15,7 +15,7 @@ int main() {
 	int x, y, choice;
 
 	printf( "\n-----GCD-LCM-----\n\n" );
-	printf( "[1] Greatest Common Divisor\n[2] Largest Common Multiplier\n\nYour choice: " );
+	printf( "[1] Greatest Common Divisor\n[2] Least Common Multiplier\n[3] LCM with GDC\n\nYour choice: " );
 	scanf( "%d", &choice );
 	printf( "First number: " ); scanf( "%d", &x );
 	printf( "Second number: " ); scanf( "%d", &y );
@@ -29,6 +29,8 @@ int main() {
 		case 2:
 			printf( "\nLCM of %d and %d is: %d\n", x, y, LCM( x, y ) );
 			break;
+		case 3:
+			printf( "\nLCM: %d ", LCM_withGDC( x, y ) );
 		default: 
 			printf( "I don't feel like doing that..." );
 			break;	

@@ -1,0 +1,115 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.2.27)  5 MAR 2019 21:59
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**01_Assignment.tex
+(./01_Assignment.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\enitkv@toks@=\toks14
+\labelindent=\skip43
+\enit@outerparindent=\dimen103
+\enit@toks=\toks15
+\enit@inbox=\box26
+\enitdp@description=\count87
+)
+(./01_Assignment.aux)
+\openout1 = `01_Assignment.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+Overfull \hbox (70.0pt too wide) in paragraph at lines 9--9
+ | 
+ []
+
+! Undefined control sequence.
+\@title ...rmatik I -\\ Assignment 1 \theexercise 
+                                                  \\ \line (1,0){415}
+l.9 \maketitle
+              
+? 
+
+Overfull \hbox (70.0pt too wide) in paragraph at lines 9--9
+ []| 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 24.
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
+ []
+
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ° in font cmr10!
+[2] [3] (./01_Assignment.aux) ) 
+Here is how much of TeX's memory you used:
+ 520 strings out of 494881
+ 7354 string characters out of 6179627
+ 59893 words of memory out of 5000000
+ 3914 multiletter control sequences out of 15000+600000
+ 7588 words of font info for 27 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 23i,6n,17p,252b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on 01_Assignment.dvi (3 pages, 4996 bytes).
