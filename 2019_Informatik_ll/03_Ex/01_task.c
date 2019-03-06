@@ -3,6 +3,8 @@
 	Exersize: 03
 	Informatik II, FS19, UZH
 	Author: Oliver Strassmann
+	
+	Checks for duplicates in an int array
 */
 
 #include <stdio.h>
