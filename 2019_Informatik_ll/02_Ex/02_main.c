@@ -3,6 +3,8 @@
 	Exersize: 02
 	Informatik II, FS19, UZH
 	Author: Oliver Strassmann
+	
+	Prints a triangle made of "*"
 */
 
 #include <stdio.h>
