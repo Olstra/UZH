@@ -9,7 +9,7 @@
 
 
 
-int spaces = 6;
+int spaces = 50;
 
 void drawTriangle( int d ) {
 	

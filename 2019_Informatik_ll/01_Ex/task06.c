@@ -8,6 +8,7 @@
 #include <stdio.h>
 
 // Sorting Algorithms
+	// improve bubblesort adding a "swapped" flag, if no more swap in last iteration we finished sorting
 void bubbleSort(int A[], int n );
 
 void selectionSort( int A[], int n );
@@ -68,6 +69,9 @@ void printArr( int A[], int n ) {
 	printf( "\n" );
 }
 
+
+// inner loop and outter loop have to go in opposite directions
+
 void bubbleSort( int A[], int n ) {
 	int temp;
 
@@ -95,8 +99,7 @@ void selectionSort( int A[], int n ) {
 		min = i;	// set default min
 
 		for( int j = i; j < n; j++ ) {
-			if( A[j] < A[min] ) { min = j; } // find current min			
-
+			if( A[j] < A[min] ) { min = j; } // find current min
 		}
 		
 		// update sorted sub-array

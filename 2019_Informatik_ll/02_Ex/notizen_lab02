@@ -1,0 +1,7 @@
+Notizen lab 02 - Info 2
+05. März 2019
+
+Asymptotic complexity expl:
+f1(n) = 1 + sin(n) ->constant growth
+
+f2(n) = ... ->
