@@ -1,13 +1,63 @@
 \documentclass{article}
 \usepackage{enumitem}
 
-\title{ \line(1,0){415} \\ Formale Grundlagen der Informatik I -\\ Assignment 1 \theexercise\\
+\title{ \line(1,0){415} \\ Formale Grundlagen der Informatik I -\\ Assignment 02 
 \line(1,0){415}}
 \author{Oliver Strassmann, 15-932-726}
 
 \begin{document}
 \maketitle
 
+\section{The logic of Quantified Statements}
+\begin{enumerate}[label=\alph*]
+		\item
+			\begin{enumerate}[label=\roman*]
+				\item False, $\forall$x$\in$V: $\neg$ Hexagon(x)
+				\item True, example: First row, second column.
+				\item False, example: First row, first column "red circle", x $\in$V but $\neg$Square(x).
+				\item False, counter-example: First row, last column, "green circle".
+				\item Depends on definition of "the left" - not immidiately on the next left slot, but in the left yes.
+				\item True.
+			\end{enumerate}
 
+		\item v and vi 
+\end{enumerate}
 
-\section{Sets and  Subsets}
+\section{Number Theory and Proofs}
+\begin{enumerate}[label=\alph*]
+	\item m $\in$ $\mathbb{N}$, n = -m $\rightarrow$ this way we allways get 0, which is an integer.
+	\item
+		\begin{itemize}
+			\item If we have two consecutive numbers, one number will allways be odd and the other one will be even.
+			\item Every even number is a multiple of 2. 
+			\item A product of two integers a$\cdot$b will always be divisible by a and b.
+			\item Let's say a is our even number, if c = a$\cdot$b, then c is divisible by a, and a is divisible by 2 since its even, therefore c is also divisible by 2, meaning it's even.
+	\end{itemize}
+	\item  
+		(7m + 1) : 7 =? integer \\*
+		7m : 7 + 1 : 7 =? integer \\*
+		7m : 7 = m, which is an integer \\*
+		But: \\*
+		1:7 != integer ! \\*
+		$\rightarrow$ The statement leads to a contradiction, it is therefore false.
+	\item 
+		\begin{enumerate}[label=\roman*]
+			\item a|b and a|c\\*
+				(b + c) mod a =? 0 \\*
+				(b mod a) + (c mod a) =? 0 \\*
+				0 + 0 = 0
+				$\rightarrow$The statement is true.
+			\item
+				c mod (a $\cdot$ b) =? 0 \\*
+				(c mod a) $\cdot$ (c mod b) =? 0
+				0 $\cdot$ 0 = 0 \\*
+				$\rightarrow$The statement is true.
+			\item n³= n * n * n; n is divisible by 2, therefore n³ is also divisible by 2, meaning it is even.
+			\item True, example: a = 2, b = 3 \\*
+				4 + 9 = 13, which is an odd integer
+			\item
+			\item
+		\end{enumitem}
+\end{enumerate}
+
+\end{document}
