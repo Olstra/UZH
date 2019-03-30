@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=latex 2019.3.26)  26 MAR 2019 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=latex 2019.3.26)  26 MAR 2019 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -31,7 +31,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box26
 \enitdp@description=\count88
 )
-(./02_Assignment.aux)
+No file 02_Assignment.aux.
 \openout1 = `02_Assignment.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -51,9 +51,15 @@ Overfull \hbox (70.0pt too wide) in paragraph at lines 9--9
  | 
  []
 
+! Undefined control sequence.
+\@title ...rmatik I -\\ Assignment 1 \theexercise 
+                                                  \\ \line (1,0){415}
+l.9 \maketitle
+              
+? 
 
 Overfull \hbox (70.0pt too wide) in paragraph at lines 9--9
- | 
+ []| 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -62,41 +68,50 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 15.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 15.
-
-Overfull \hbox (16.8884pt too wide) in paragraph at lines 17--18
-[]\OT1/cmr/m/n/10 False, ex-am-ple: First row, first col-umn "red cir-cle", x $
-\OMS/cmsy/m/n/10 2$\OT1/cmr/m/n/10 V but $\OMS/cmsy/m/n/10 :$\OT1/cmr/m/n/10 Sq
-uare(x). 
- []
-
-! Undefined control sequence.
-<recently read> \mathbb 
-                        
-l.28 	\item m $\in$ $\mathbb
-                            {N}$, n = -m $\rightarrow$ this way we allways g...
-
-? 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
- [1
+*
+(Please type a command or say `\end')
+*exit
 
-]
+*
+! Interruption.
+<*> 
+    
+? 
+(Please type a command or say `\end')
+*\end
 
-! Package inputenc Error: Unicode character ³ (U+B3)
-(inputenc)                not set up for use with LaTeX.
+*`\end'
 
-See the inputenc package documentation for explanation.
+! LaTeX Error: \begin{document} ended by \end{`}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
+<*> `
+     \end'
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+<*> `
+     \end'
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 499 strings out of 492642
+ 7156 string characters out of 6131813
+ 66698 words of memory out of 5000000
+ 4463 multiletter control sequences out of 15000+600000
+ 7280 words of font info for 26 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,6n,18p,142b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
+                                     
 l.55 			\item n³
                  = n * n * n; n is divisible by 2, therefore n³ is also div...
 
@@ -133,4 +148,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  23i,6n,19p,214b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 02_Assignment.dvi (2 pages, 2944 bytes).
+Output written on 02_Assignment.dvi (2 pages, 2996 bytes).
