@@ -1,0 +1,150 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_002{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_002{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_003{font-family:Arial,serif;font-size:17.3px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_003{font-family:Arial,serif;font-size:17.3px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_004{font-family:Arial,serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_004{font-family:Arial,serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_005{font-family:Arial,serif;font-size:14.4px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_005{font-family:Arial,serif;font-size:14.4px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_006{font-family:Arial,serif;font-size:7.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_006{font-family:Arial,serif;font-size:7.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_007{font-family:Arial,serif;font-size:9.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_007{font-family:Arial,serif;font-size:9.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+-->
+</style>
+<script type="text/javascript" src="ffa391c8-5657-11e9-9d71-0cc47a792c0a_id_ffa391c8-5657-11e9-9d71-0cc47a792c0a_files/wz_jsgraphics.js"></script>
+</head>
+<body>
+<div style="position:absolute;left:50%;margin-left:-297px;top:0px;width:595px;height:841px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="ffa391c8-5657-11e9-9d71-0cc47a792c0a_id_ffa391c8-5657-11e9-9d71-0cc47a792c0a_files/background1.jpg" width=595 height=841></div>
+<div style="position:absolute;left:352.31px;top:105.06px" class="cls_002"><span class="cls_002">Department of Informatics</span></div>
+<div style="position:absolute;left:344.80px;top:117.02px" class="cls_002"><span class="cls_002">Database Technology Group</span></div>
+<div style="position:absolute;left:380.59px;top:128.97px" class="cls_002"><span class="cls_002">Prof. Dr. M. Böhlen</span></div>
+<div style="position:absolute;left:249.23px;top:202.02px" class="cls_003"><span class="cls_003">Informatics II</span></div>
+<div style="position:absolute;left:261.75px;top:223.94px" class="cls_003"><span class="cls_003">Exercise 7</span></div>
+<div style="position:absolute;left:260.40px;top:261.69px" class="cls_004"><span class="cls_004">April 01, 2019</span></div>
+<div style="position:absolute;left:124.80px;top:326.78px" class="cls_005"><span class="cls_005">Abstract Data Types (ADT)</span></div>
+<div style="position:absolute;left:124.80px;top:352.99px" class="cls_002"><span class="cls_002">Task 1.  Create a new datatype stack of positive integers that is able to store</span></div>
+<div style="position:absolute;left:124.80px;top:364.94px" class="cls_002"><span class="cls_002">an arbitrary number of elements.  You should implement stack using dynamic</span></div>
+<div style="position:absolute;left:124.80px;top:376.90px" class="cls_002"><span class="cls_002">array, which initial size is INITIAL STACK SIZE, a constant equal to 5.  When</span></div>
+<div style="position:absolute;left:124.80px;top:388.85px" class="cls_002"><span class="cls_002">stack becomes full, increase the size of stack array for INITIAL STACK SIZE</span></div>
+<div style="position:absolute;left:124.80px;top:400.81px" class="cls_002"><span class="cls_002">elements.  You don’t have to take care of stack size when removing elements</span></div>
+<div style="position:absolute;left:124.80px;top:412.76px" class="cls_002"><span class="cls_002">from stack. A stack is of the following type:</span></div>
+<div style="position:absolute;left:226.00px;top:448.38px" class="cls_006"><span class="cls_006">1</span></div>
+<div style="position:absolute;left:234.96px;top:446.39px" class="cls_007"><span class="cls_007">typedef struct stackADT {</span></div>
+<div style="position:absolute;left:226.00px;top:459.34px" class="cls_006"><span class="cls_006">2</span></div>
+<div style="position:absolute;left:251.54px;top:457.35px" class="cls_007"><span class="cls_007">int ∗elements;</span></div>
+<div style="position:absolute;left:226.00px;top:470.30px" class="cls_006"><span class="cls_006">3</span></div>
+<div style="position:absolute;left:251.54px;top:468.31px" class="cls_007"><span class="cls_007">int size;</span></div>
+<div style="position:absolute;left:226.00px;top:481.26px" class="cls_006"><span class="cls_006">4</span></div>
+<div style="position:absolute;left:251.54px;top:479.27px" class="cls_007"><span class="cls_007">int count;</span></div>
+<div style="position:absolute;left:226.00px;top:492.22px" class="cls_006"><span class="cls_006">5</span></div>
+<div style="position:absolute;left:234.96px;top:490.23px" class="cls_007"><span class="cls_007">} stack;</span></div>
+<div style="position:absolute;left:139.75px;top:516.27px" class="cls_002"><span class="cls_002">Along with the above datatype create the following functions:</span></div>
+<div style="position:absolute;left:139.75px;top:537.01px" class="cls_002"><span class="cls_002">• void initialize(stack *s) which initializes stack s.</span></div>
+<div style="position:absolute;left:139.75px;top:556.47px" class="cls_002"><span class="cls_002">• int isEmpty(stack *s) which checks if stack s is empty or not.</span></div>
+<div style="position:absolute;left:139.75px;top:575.92px" class="cls_002"><span class="cls_002">• int push(stack *s, int value) which inserts element value into s and returns</span></div>
+<div style="position:absolute;left:149.71px;top:587.87px" class="cls_002"><span class="cls_002">the position where it was added in the elements array.</span></div>
+<div style="position:absolute;left:139.75px;top:607.33px" class="cls_002"><span class="cls_002">• int pop(stack *s) which removes an element from s and returns its value.</span></div>
+<div style="position:absolute;left:149.71px;top:619.28px" class="cls_002"><span class="cls_002">In case of an error, -1 should be returned.</span></div>
+<div style="position:absolute;left:139.75px;top:638.74px" class="cls_002"><span class="cls_002">• int compareStack(stack *sA, stack *sB) which returns 1 if sA and sB are</span></div>
+<div style="position:absolute;left:149.71px;top:650.69px" class="cls_002"><span class="cls_002">equal and 0 in any other case.</span></div>
+<div style="position:absolute;left:139.75px;top:670.15px" class="cls_002"><span class="cls_002">• int printStack(stack *s) which prints the values of the stack starting from</span></div>
+<div style="position:absolute;left:149.71px;top:682.10px" class="cls_002"><span class="cls_002">the top element of s.</span></div>
+<div style="position:absolute;left:124.80px;top:702.84px" class="cls_002"><span class="cls_002">Test your implementation by performing the following operations:</span></div>
+<div style="position:absolute;left:136.98px;top:721.82px" class="cls_002"><span class="cls_002">1. Create and initialize stacks sA, sB.</span></div>
+<div style="position:absolute;left:136.98px;top:741.28px" class="cls_002"><span class="cls_002">2. Insert 1, 2, 3, 4, 5, 6, 7, 8 into sA, remove two elements and print the</span></div>
+<div style="position:absolute;left:149.71px;top:753.23px" class="cls_002"><span class="cls_002">values of the removed elements.</span></div>
+<div style="position:absolute;left:294.17px;top:783.12px" class="cls_002"><span class="cls_002">1</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-297px;top:851px;width:595px;height:841px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="ffa391c8-5657-11e9-9d71-0cc47a792c0a_id_ffa391c8-5657-11e9-9d71-0cc47a792c0a_files/background2.jpg" width=595 height=841></div>
+<div style="position:absolute;left:352.31px;top:105.06px" class="cls_002"><span class="cls_002">Department of Informatics</span></div>
+<div style="position:absolute;left:344.80px;top:117.02px" class="cls_002"><span class="cls_002">Database Technology Group</span></div>
+<div style="position:absolute;left:380.59px;top:128.97px" class="cls_002"><span class="cls_002">Prof. Dr. M. Böhlen</span></div>
+<div style="position:absolute;left:136.98px;top:167.43px" class="cls_002"><span class="cls_002">3. Insert 10, 11, 12, 13 into sB</span></div>
+<div style="position:absolute;left:136.98px;top:187.01px" class="cls_002"><span class="cls_002">4. Print sB</span></div>
+<div style="position:absolute;left:136.98px;top:206.60px" class="cls_002"><span class="cls_002">5. Remove one element of sB and print the value of the removed element.</span></div>
+<div style="position:absolute;left:136.98px;top:226.19px" class="cls_002"><span class="cls_002">6. Insert 8 and 9 into sB.</span></div>
+<div style="position:absolute;left:136.98px;top:245.77px" class="cls_002"><span class="cls_002">7. Compare sA with sA and print the result.</span></div>
+<div style="position:absolute;left:136.98px;top:265.36px" class="cls_002"><span class="cls_002">8. Compare sA with sB and print the result.</span></div>
+<div style="position:absolute;left:136.98px;top:284.94px" class="cls_002"><span class="cls_002">9. Remove 4 elements from sA and print the values of the removed elements.</span></div>
+<div style="position:absolute;left:132.00px;top:304.53px" class="cls_002"><span class="cls_002">10. Delete the stacks.</span></div>
+<div style="position:absolute;left:124.80px;top:330.28px" class="cls_002"><span class="cls_002">Task 2.  Consider having a stack implementation from the Task</span></div>
+<div style="position:absolute;left:409.82px;top:330.28px" class="cls_002"><span class="cls_002">1. What does</span></div>
+<div style="position:absolute;left:124.80px;top:342.23px" class="cls_002"><span class="cls_002">the function void func(stack *s, int n, int curr) do? What is the output of the</span></div>
+<div style="position:absolute;left:124.80px;top:354.19px" class="cls_002"><span class="cls_002">following program?</span></div>
+<div style="position:absolute;left:144.73px;top:381.24px" class="cls_007"><span class="cls_007">Algo: func(s, n, curr)</span></div>
+<div style="position:absolute;left:144.73px;top:400.52px" class="cls_007"><span class="cls_007">if isEmpty(s) or (curr == n) then</span></div>
+<div style="position:absolute;left:156.46px;top:411.47px" class="cls_007"><span class="cls_007">return ;</span></div>
+<div style="position:absolute;left:144.73px;top:426.26px" class="cls_007"><span class="cls_007">value = pop(s);</span></div>
+<div style="position:absolute;left:144.73px;top:437.22px" class="cls_007"><span class="cls_007">func(s, n, curr+1);</span></div>
+<div style="position:absolute;left:144.73px;top:448.18px" class="cls_007"><span class="cls_007">if curr ! = n/2 then</span></div>
+<div style="position:absolute;left:156.46px;top:459.14px" class="cls_007"><span class="cls_007">push(s, val);</span></div>
+<div style="position:absolute;left:144.73px;top:486.73px" class="cls_007"><span class="cls_007">Algo: main()</span></div>
+<div style="position:absolute;left:144.73px;top:506.01px" class="cls_007"><span class="cls_007">initialize(s);</span></div>
+<div style="position:absolute;left:144.73px;top:516.97px" class="cls_007"><span class="cls_007">push(s, 1);</span></div>
+<div style="position:absolute;left:144.73px;top:527.93px" class="cls_007"><span class="cls_007">push(s, 2);</span></div>
+<div style="position:absolute;left:144.73px;top:538.89px" class="cls_007"><span class="cls_007">push(s, 3);</span></div>
+<div style="position:absolute;left:144.73px;top:549.84px" class="cls_007"><span class="cls_007">push(s, 4);</span></div>
+<div style="position:absolute;left:144.73px;top:560.80px" class="cls_007"><span class="cls_007">push(s, 5);</span></div>
+<div style="position:absolute;left:144.73px;top:571.76px" class="cls_007"><span class="cls_007">push(s, 6);</span></div>
+<div style="position:absolute;left:144.73px;top:582.72px" class="cls_007"><span class="cls_007">push(s, 7);</span></div>
+<div style="position:absolute;left:144.73px;top:593.68px" class="cls_007"><span class="cls_007">push(s, 8);</span></div>
+<div style="position:absolute;left:144.73px;top:604.64px" class="cls_007"><span class="cls_007">push(s, 9);</span></div>
+<div style="position:absolute;left:144.73px;top:615.60px" class="cls_007"><span class="cls_007">curr = 0;</span></div>
+<div style="position:absolute;left:144.73px;top:626.56px" class="cls_007"><span class="cls_007">n = 9; //Stack size</span></div>
+<div style="position:absolute;left:144.73px;top:637.52px" class="cls_007"><span class="cls_007">func(s, 9, curr);</span></div>
+<div style="position:absolute;left:144.73px;top:648.47px" class="cls_007"><span class="cls_007">printStack(s);</span></div>
+<div style="position:absolute;left:124.80px;top:678.85px" class="cls_002"><span class="cls_002">Task 3.  Consider a datatype queue corresponding to a queue of positive in-</span></div>
+<div style="position:absolute;left:124.80px;top:690.81px" class="cls_002"><span class="cls_002">tegers able to store QUEUE SIZE elements, where QUEUE SIZE is defined as a</span></div>
+<div style="position:absolute;left:124.80px;top:702.76px" class="cls_002"><span class="cls_002">constant. A queue is of the following structure:</span></div>
+<div style="position:absolute;left:127.19px;top:734.30px" class="cls_006"><span class="cls_006">1</span></div>
+<div style="position:absolute;left:136.14px;top:732.31px" class="cls_007"><span class="cls_007">typedef struct queueADT {</span></div>
+<div style="position:absolute;left:127.19px;top:745.26px" class="cls_006"><span class="cls_006">2</span></div>
+<div style="position:absolute;left:152.73px;top:743.27px" class="cls_007"><span class="cls_007">int elements[QUEUE SIZE];</span></div>
+<div style="position:absolute;left:127.19px;top:756.22px" class="cls_006"><span class="cls_006">3</span></div>
+<div style="position:absolute;left:152.73px;top:754.23px" class="cls_007"><span class="cls_007">int head;</span></div>
+<div style="position:absolute;left:294.17px;top:783.12px" class="cls_002"><span class="cls_002">2</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-297px;top:1702px;width:595px;height:841px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="ffa391c8-5657-11e9-9d71-0cc47a792c0a_id_ffa391c8-5657-11e9-9d71-0cc47a792c0a_files/background3.jpg" width=595 height=841></div>
+<div style="position:absolute;left:352.31px;top:105.06px" class="cls_002"><span class="cls_002">Department of Informatics</span></div>
+<div style="position:absolute;left:344.80px;top:117.02px" class="cls_002"><span class="cls_002">Database Technology Group</span></div>
+<div style="position:absolute;left:380.59px;top:128.97px" class="cls_002"><span class="cls_002">Prof. Dr. M. Böhlen</span></div>
+<div style="position:absolute;left:127.19px;top:170.42px" class="cls_006"><span class="cls_006">4</span></div>
+<div style="position:absolute;left:152.73px;top:168.42px" class="cls_007"><span class="cls_007">int count;</span></div>
+<div style="position:absolute;left:127.19px;top:181.38px" class="cls_006"><span class="cls_006">5</span></div>
+<div style="position:absolute;left:136.14px;top:179.38px" class="cls_007"><span class="cls_007">} queue;</span></div>
+<div style="position:absolute;left:139.75px;top:199.15px" class="cls_002"><span class="cls_002">Considering the queue datatype write the pseudocode for the following func-</span></div>
+<div style="position:absolute;left:124.80px;top:211.11px" class="cls_002"><span class="cls_002">tions:</span></div>
+<div style="position:absolute;left:139.75px;top:233.03px" class="cls_002"><span class="cls_002">• void initialize(queue *q) which initializes the head and the count of q.</span></div>
+<div style="position:absolute;left:139.75px;top:252.95px" class="cls_002"><span class="cls_002">• int enqueue(queue *q, int value) which inserts the element value in q and</span></div>
+<div style="position:absolute;left:149.71px;top:264.91px" class="cls_002"><span class="cls_002">returns the position it was added in the elements array.  In case of an</span></div>
+<div style="position:absolute;left:149.71px;top:276.86px" class="cls_002"><span class="cls_002">error, -1 should be returned.</span></div>
+<div style="position:absolute;left:139.75px;top:296.79px" class="cls_002"><span class="cls_002">• int dequeue(queue *q) which removes an element from q and returns its</span></div>
+<div style="position:absolute;left:149.71px;top:308.74px" class="cls_002"><span class="cls_002">value. In case of an error, -1 should be returned.</span></div>
+<div style="position:absolute;left:139.75px;top:328.67px" class="cls_002"><span class="cls_002">• int compareQueue(queue *qA, queue *qB) that returns 1 if qA and qB are</span></div>
+<div style="position:absolute;left:149.71px;top:340.62px" class="cls_002"><span class="cls_002">equal and 0 in any other case.</span></div>
+<div style="position:absolute;left:124.80px;top:366.52px" class="cls_002"><span class="cls_002">Task 4.  The LIFO behaviour of a stack can be simulated using two FIFO</span></div>
+<div style="position:absolute;left:124.80px;top:378.48px" class="cls_002"><span class="cls_002">queues.  The elements of the stack are moved from one queue to another to</span></div>
+<div style="position:absolute;left:124.80px;top:390.43px" class="cls_002"><span class="cls_002">properly perform the push and pop operations. After the completion of a push</span></div>
+<div style="position:absolute;left:124.80px;top:402.39px" class="cls_002"><span class="cls_002">and pop operation, all elements are stored in only one of the two queues.  As-</span></div>
+<div style="position:absolute;left:124.80px;top:414.34px" class="cls_002"><span class="cls_002">sume that a stack is implemented using two queues of identical size. Initially the</span></div>
+<div style="position:absolute;left:124.80px;top:426.30px" class="cls_002"><span class="cls_002">queues, and thus the stack, are empty. Make a table to illustrate the sequence of</span></div>
+<div style="position:absolute;left:124.80px;top:438.25px" class="cls_002"><span class="cls_002">queue operations needed to simulate the following sequence of stack operations:</span></div>
+<div style="position:absolute;left:124.80px;top:450.21px" class="cls_002"><span class="cls_002">push(4); push(5); push(6); pop(); pop(); push(7);  Draw the state of</span></div>
+<div style="position:absolute;left:124.80px;top:462.16px" class="cls_002"><span class="cls_002">the queues after each stack operation.</span></div>
+<div style="position:absolute;left:130.78px;top:486.51px" class="cls_002"><span class="cls_002">Queue A   Queue B   Stack Op   Queue Op</span></div>
+<div style="position:absolute;left:294.17px;top:783.12px" class="cls_002"><span class="cls_002">3</span></div>
+</div>
+
+</body>
+</html>
