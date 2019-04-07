@@ -1,0 +1,5 @@
+# not needed
+*.aux
+*.dvi
+*.log
+*.swp
