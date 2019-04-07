@@ -5,3 +5,4 @@
 *.swp
 *.toc
 *.o
+.* # ignore hidden files
