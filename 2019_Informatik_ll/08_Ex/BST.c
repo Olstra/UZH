@@ -157,9 +157,6 @@ int main(){
 
 	// delete some values
 	int delVals[] = {4, 7, 2};
-	// delete(&root, 4);
-//	delete(&root, 7);
-// 	delete(&root, 2);
  	for(int i = 0; i < 3; i++){ delete(&root, delVals[i]); }	
 	
 	printf("\n");
