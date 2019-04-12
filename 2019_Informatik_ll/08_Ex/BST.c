@@ -113,8 +113,11 @@ void delete(struct TreeNode** root, int val){
 		parent = findParent(*root, succsessor);
 		
 		node->val = succsessor->val; // assign new value to node
-
-		parent->left = succsessor->right; // repoint subtree
+		
+		if(parent == node){
+			parent->right = succsessor->right;
+		}
+		else{ parent->left = succsessor->right; } // node is the root
 		
 		free(succsessor); 
 		return;
@@ -126,8 +129,7 @@ void delete(struct TreeNode** root, int val){
 	
 		// point parent to node's child	
 		if(parent){ (parent->left == node) ? (parent->left = succsessor) : (parent->right = succsessor); } 
-		// case root with 1 child
-		else{ *root = succsessor; }
+		else{ *root = succsessor; } // case root with 1 child
 	}
 	
 	free(node); // delete node 
@@ -152,13 +154,15 @@ int main(){
 	for(int i = 0; i < 8; i++){ insert(&root, values[i]); }
 
 	print(root);
-	// struct TreeNode* temp = search(root, 8);
-	// printf("\nTemp node val: %d", temp->right->val);
+
 	// delete some values
 	int delVals[] = {4, 7, 2};
-	delete(&root, 4);
-	// for(int i = 0; i < 3; i++){ delete(&root, delVals[i]); }	
-	printf("\nroot: %d", root->val);
+	// delete(&root, 4);
+//	delete(&root, 7);
+// 	delete(&root, 2);
+ 	for(int i = 0; i < 3; i++){ delete(&root, delVals[i]); }	
+	
+	printf("\n");
 	print(root);
 
 	return 0;
