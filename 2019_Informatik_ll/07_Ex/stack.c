@@ -4,9 +4,9 @@
 const int INITIAL_STACK_SIZE = 5;	
 
 struct stack{
-	const int* root;		// points to "struct stackArray[0]"
+	const int* root;	// points to "struct stackArray[0]"
 	int size;		// keep track of total size of struct stack
-	int topElement; // save index of element at top of struct stack (LIFO) 
+	int topElement; 	// save index of element at top of struct stack (LIFO) 
 };
 
 void initialize(struct stack *s){
@@ -16,16 +16,13 @@ void initialize(struct stack *s){
 
 	// set values of stack struct	
 	s->size = INITIAL_STACK_SIZE; 
-	s->root = elements[0]; // point root to array
+	s->root = elements[0]; 	// point root to array
 	s->topElement = 0;	// [0] element remains empty as root
 }
 
 int isEmpty(struct stack *s){
-
 	if(s->topElement <= 0) return 1; // "TRUE"
-
 	return 0; // "FALSE" else stack is not empty
-
 }
 
 int push(struct stack *s, int value){
@@ -91,9 +88,11 @@ void printStack(struct stack *s){
 
 
 int main(){
+	
 	struct stack* myStack = (struct stack*) malloc( sizeof(struct stack));
 	
 	initialize(myStack);
 
 	return 0;
+	
 }
