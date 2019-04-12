@@ -1,6 +1,6 @@
 /**
- * Exersize: XY
- * Task: xx
+ * Exersize: 08 - Binary Search Tree
+ * Task: 03
  * Algorithms and Data structures
  * Spring 2019, UZH
  * Author: Oliver Strassmann
