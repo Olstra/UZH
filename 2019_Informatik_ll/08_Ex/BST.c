@@ -60,6 +60,9 @@ void insert(struct TreeNode** root, int val) {
 			curr = curr->left; // newNode->val is samller, go left
 		}
 		else{ curr = curr->right; }
+
+		(val < curr->val) ? (curr = curr->left) : (curr = curr->right);
+		
 	}	
 
 	// insert node as left/right child
