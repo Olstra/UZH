@@ -4,18 +4,18 @@ Repo containing my exercies solutions of UZH courses.
 
 ## Overview
 
-C:
+C
 - Informatik II
 
-Python:
+Python
 - Informatik I
 - Introduction into AI
 
-Java:
+Java
 - Software Construction
 
-Kotlin:
+Kotlin
 - PLP (Programming Languages and Paradigms)
 
-Web development:
+Web development
 - Web & Mobile Accessibility
