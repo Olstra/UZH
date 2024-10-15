@@ -1,0 +1,32 @@
+package bakery;
+
+/**
+ * Implements the Composite pattern
+ * This is the general "component" part of the pattern
+ *
+ * */
+public abstract class BakeryComponent {
+
+    /**
+     * adds a bakery component
+     * */
+    public void add(BakeryComponent component) {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * @return  returns the name of the component
+     * */
+    public String getName(){
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * prints the name of the component
+     * (couldn't really be used here, since the name
+     * of the component's print methods had to be
+     * named differently)
+     * */
+    public void print() {};
+
+}

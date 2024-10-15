@@ -1,0 +1,53 @@
+<script src="raphael-min.js"></script>
+<script src="flowchart.js"></script>
+
+<div id="diagram"></div>
+<script>
+    var diagram = flowchart.parse("" +
+        "st=>start: Start\n" +
+        "e=>end: End\n" +
+
+        "id=>operation: id\n" +
+        "cond1=>condition: if (id == null)\n" +
+
+        "cond2=>condition: if (id.equals(UTC))\n" +
+        "op1=>operation: zone = ... .getZone(id)\n" +
+        "cond3=>condition: if (zone != null)\n" +
+
+        "cond4=>condition: if (id.startswith + or -)\n" +
+        "op3=>operation: throw exception\n" +
+
+        "op2=>operation: offset\n" +
+        "cond5=>condition: if (offset == 0L)\n" +
+        "op3=>operation: id = printOffset(offset)\n" +
+
+        "op4=>operation: throw exception\n" +
+
+        "return1=>operation: return getDefault()\n" +
+        "return2=>operation: return DateTimeZone.UTC\n" +
+        "return3=>operation: return zone\n" +
+        "return4=>operation: return fixedOffsetZone(id, offset)\n" +
+        "return5=>operation: return xxx\n" +
+
+        "\n" +
+
+        "st->id->cond1\n" +
+
+        "cond1(yes, right)->return1->e\n" +
+        "cond1(no)->cond2\n" +
+
+        "cond2(yes, right)->return2->e\n" +
+        "cond2(no)->op1->cond3\n" +
+
+        "cond3(no)->cond4\n" +
+        "cond3(yes, right)->return3->e\n" +
+
+        "cond4(yes)->op2->cond5\n" +
+        "cond4(no, left)->op4->e\n" +
+
+        "cond5(yes, right)->return2->e\n" +
+        "cond5(no)->op3->return4->e"
+    );
+
+    diagram.drawSVG('diagram');
+</script>

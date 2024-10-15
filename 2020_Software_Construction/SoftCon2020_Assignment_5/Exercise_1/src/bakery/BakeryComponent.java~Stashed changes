@@ -1,0 +1,26 @@
+package bakery;
+
+public abstract class BakeryComponent {
+
+    // Javadoc...
+    public void add(BakeryComponent component) {
+        throw new UnsupportedOperationException();
+    }
+
+    public void remove(BakeryComponent component) {
+        throw new UnsupportedOperationException();
+    }
+
+    // not sure if we'll need this...
+    public BakeryComponent getChild(int index) {
+        throw new UnsupportedOperationException();
+    }
+
+    public String  getName(){
+        throw new UnsupportedOperationException();
+    }
+
+    public void print() {
+        throw new UnsupportedOperationException();
+    }
+}

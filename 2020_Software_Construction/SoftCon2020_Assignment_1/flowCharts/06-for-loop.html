@@ -1,0 +1,77 @@
+<script src="raphael-min.js"></script>
+<script src="flowchart.js"></script>
+
+<div id="diagram"></div>
+<script>
+    var diagram = flowchart.parse("" +
+        "st=>start: Start\n" +
+
+
+        "param1=>operation: ReadablePartial other\n" +
+
+        "cond1=>condition: if (this == other)\n" +
+
+
+        "cond2=>condition: if (size() != other.size())\n" +
+
+
+        "forInit1=>operation: int i = 0, isize = size()\n" +
+        "for1=>condition: for i<isize\n" +
+        "cond3=>condition: if(getFieldType(1) != other.getFieldType(1))\n" +
+
+        "op1=>operation: i++\n" +
+
+        "forInit2=>operation: int i = 0, isize = size()\n" +
+        "for2=>condition: for i<isize\n" +
+
+        "cond4=>condition: if(getValue(1) > other.getValue(1))\n" +
+        "e1=>operation: throw new ClassCastException\n" +
+
+        "cond5=>condition: if(getValue(1) < other.getValue(1))\n" +
+
+        "op2=>operation: i++\n" +
+
+
+
+        "e2=>operation: throw new ClassCastException\n" +
+
+        "return1=>operation: return 0\n" +
+        "return2=>operation: return 1\n" +
+        "return3=>operation: return -1\n" +
+        "return4=>operation: return 0\n" +
+
+        "e=>end: End\n" +
+        "en2=>end: End\n" +
+        "en3=>end: End\n" +
+        "en4=>end: End\n" +
+        "en5=>end: End\n" +
+        "en6=>end: End\n" +
+
+        "\n" +
+
+        "st->param1->cond1\n" +
+
+        "cond1(yes,right)->return1->e\n" +
+        "cond1(no, bottom)->cond2\n" +
+
+        "cond2(yes,left)->e1(bottom)->en6\n" +
+        "cond2(no, bottom)->forInit1->for1\n" +
+
+        "for1(no, right)->forInit2->for2\n" +
+        "for1(yes)->cond3\n" +
+
+        "cond3(yes, bottom)->e2(bottom)->en5\n" +
+        "cond3(no, left)->op1(top)->for1\n" +
+
+        "for2(yes,right)->cond4\n" +
+        "for2(no, bottom)->return4(bottom)->en4\n" +
+
+        "cond4(yes, bottom)->return2(bottom)->en3\n" +
+        "cond4(no, right)->cond5\n" +
+        "cond5(yes, bottom)->return3(bottom)->en2\n" +
+        "cond5(no, right)->op2(top)->for2"
+
+    );
+
+    diagram.drawSVG('diagram',{'x':0,'y':0,'line-length': 20,'font-size': 26,'text-margin': 10});
+</script>

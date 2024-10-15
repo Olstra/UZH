@@ -1,0 +1,37 @@
+<script src="raphael-min.js"></script>
+<script src="flowchart.js"></script>
+
+<div id="diagram"></div>
+<script>
+  var diagram = flowchart.parse("" +
+    "st=>start: Start\n" +
+    "e=>end: End\n" +
+
+    "param1=>operation: DateTimeField field\n" +
+    "param2=>operation: DatetimeField type\n" +
+      "param3=>operation: int divisor\n" +
+
+        "cond1=>condition: if (divisor < 2)\n" +
+        "op1=>operation: throw new IllegalArgumentException\n" +
+        "e1=>end: End\n" +
+
+        "op2=>operation: DurationField rangeField = field.getDurationField\n" +
+        "cond2=>condition: if (rangeField == null)\n" +
+        "op3=>operation: iRangeField = null\n" +
+
+        "op4=>operation: iRangeField = newScaledDurationField(rangeField,type.getRangeDurationType(),divisor)\n" +
+
+        "op5=>operation: iDurationField=field.getRangeDurationField()\n" +
+        "op6=>operation: iDivisor=divisor\n" +
+
+        "\n" +
+
+        "st->param1->param2->param3->cond1\n" +
+        "cond1(yes, right)->op1->e1\n" +
+        "cond1(no)->op2->cond2\n" +
+        "cond2(yes, right)->op3->op5\n" +
+        "cond2(no)->op4->op5->op6->e"
+    );
+
+    diagram.drawSVG('diagram');
+</script>

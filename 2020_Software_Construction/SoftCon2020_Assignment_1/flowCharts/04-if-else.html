@@ -1,0 +1,49 @@
+<script src="raphael-min.js"></script>
+<script src="flowchart.js"></script>
+
+<div id="diagram"></div>
+<script>
+    var diagram = flowchart.parse("" +
+        "st=>start: Start\n" +
+        "e=>end: End\n" +
+
+        "param1=>operation: final int index\n" +
+        "param2=>operation: Converter[] removed\n" +
+
+        "op3=>operation: Converter[] converters = iConverters\n" +
+        "op4=>operation: int length = converters.length\n" +
+
+        "cond1=>condition: if (index >= length)\n" +
+        "op5=>operation: throw new IndexOutOfBoundsException\n" +
+        "e1=>end: End\n" +
+
+        "cond2=>condition: if (removed != null)\n" +
+        "op6=>operation: removed[0] - converters[index])\n" +
+
+        "op7=>operation: Converter[] copy = new Converter[length - 1]\n" +
+
+        "op8=>operation: int j = 0\n" +
+        "op9=>operation: int i=0\n" +
+        "for1=>condition: i<length\n" +
+        "cond4=>condition: if (i != index)\n" +
+        "op10=>operation: i++\n" +
+        "op11=>operation: copy[j++] - converters[i]\n" +
+
+
+        "op12=>operation: return new ConverterSet(copy)\n" +
+
+        "\n" +
+
+        "st->param1->param2->op3->op4->cond1\n" +
+        "cond1(yes, right)->op5->e1\n" +
+        "cond1(no)->cond2\n" +
+        "cond2(yes, right)->op6->op7\n" +
+        "cond2(no)->op7->op8->op9->for1\n" +
+        "cond4(yes, right)->op11->op10\n" +
+        "cond4(no)->op10->for1\n" +
+        "for1(yes, right)->cond4\n" +
+        "for1(no)->op12->e"
+    );
+
+    diagram.drawSVG('diagram',{'x':0,'y':0,'line-length': 20,'font-size': 26,'text-margin': 10});
+</script>

@@ -1,0 +1,34 @@
+<script src="raphael-min.js"></script>
+<script src="flowchart.js"></script>
+
+<div id="diagram"></div>
+<script>
+  var diagram = flowchart.parse("" +
+      "st=>start: Start\n" +
+      "e=>end: End\n" +
+      "i=>operation: i\n" +
+      "try=>operation: try/catch\n" +
+      "cacheSize=>operation: cacheSize\n" +
+      "cond1=>condition: if (i == null)\n" +
+
+      "op4=>operation: cacheSize = i. ...\n" +
+      "op5=>operation: cacheSize--\n" +
+      "op6=>operation: shift = 0\n" +
+
+      "while=>condition: while cacheSize > 0\n" +
+      "op7=>operation: shift++\n" +
+      "op8=>operation: cacheSize >>= 1\n" +
+      "op9=>operation: cacheSize = 1 << shift\n" +
+
+      "opFinal=>operation: cInfo... = cacheSize-1\n" +
+      "\n" +
+
+      "st->i->try->cacheSize->cond1\n" +
+      "cond1(yes, right)->op4->opFinal->opFinal->e\n" +
+      "cond1(no)->op5->op6->while\n" +
+      "while(yes, right)->op7->op8->while(right)\n" +
+      "while(no)->op9->opFinal->e"
+  );
+
+  diagram.drawSVG('diagram');
+ </script>

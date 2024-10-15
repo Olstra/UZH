@@ -1,0 +1,17 @@
+package structure
+
+- main class
+    - start game
+
+- game class
+    -> creates board
+    -> creates ships
+    -> places ships on board
+
+- board class
+
+- Ship (interface)
+    - Carrier class
+    - Battleship class
+    - Submarine class
+    - PatrolBoat class

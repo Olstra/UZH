@@ -1,0 +1,62 @@
+<script src="raphael-min.js"></script>
+<script src="flowchart.js"></script>
+
+<div id="diagram"></div>
+<script>
+    var diagram = flowchart.parse("" +
+        "st=>start: Start\n" +
+        "en1=>end: End\n" +
+
+        "param1=>operation: ReadablePartial start\n" +
+        "param2=>operation: ReadablePartial end\n" +
+
+        "cond1=>condition: if (start == null or end == null)\n" +
+        "e1=>operation: throw new IllegalArgumentException\n" +
+        "en2=>end: End\n" +
+
+        "cond2=>condition: if (start.size()!= end.size())\n" +
+        "e2=>operation: throw new IllegalArgumentException\n" +
+        "en3=>end: End\n" +
+
+        "op1=>operation: DurationFieldType[] types = new DurationFieldType[start.size()]\n" +
+        "op2=>operation: int[] values = new int[start.size()]\n" +
+
+        "forinit1=>operation: int i = 0, isize = start.size()\n" +
+        "for1=>condition: i < isize\n" +
+        "cond3=>condition: if(start.getFieldType(i) != end.getFieldType(i))\n" +
+        "e3=>operation: throw new IllegalArgumentException\n" +
+        "en4=>end: End\n" +
+
+        "op3=>operation: types[i] = start.getFieldType(i).getDurationType()\n" +
+        "cond4=>condition: if(i> 0 && types[i - 1] == types[i])\n" +
+        "e4=>operation: throw new IllegalArgumentException\n" +
+        "en5=>end: End\n" +
+        "op4=>operation: values[i] = end.getValue(i) - start.getValue(i)\n" +
+        "op5=>operation: i++\n" +
+        "return1=>operation: return new Period(values, PeriodType.forFields(types))\n" +
+        "en6=>end: End\n" +
+
+        "\n" +
+
+        "st->param1->param2->cond1\n" +
+
+        "cond1(yes,right)->e1->en1\n" +
+        "cond1(no,bottom)->cond2\n" +
+
+
+        "cond2(no, right)->op1->op2->forinit1->for1\n" +
+        "cond2(yes,bottom)->e2(bottom)->en2\n" +
+
+        "for1(yes, right)->cond3\n" +
+        "for1(no, bottom)->return1->en3\n" +
+
+
+        "cond3(yes, bottom)->e3->en4\n" +
+        "cond3(no, right)->op3->cond4\n" +
+
+        "cond4(no, bottom)->op4(right)->op5(top)->for1\n"+
+        "cond4(yes, right)->e4->en5"
+    );
+
+    diagram.drawSVG('diagram',{'x':0,'y':0,'line-length': 30,'font-size': 27,'text-margin': 10});
+</script>
